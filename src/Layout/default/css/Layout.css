@@ -1,0 +1,26 @@
+*{
+  font-family: arial;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: dodgerblue;
+}
+a:hover{
+  color: royalblue;
+}
+.main{
+  margin: 0 50px
+}
+.pull-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.h1 {
+  margin-top: 10px !important;
+  margin-bottom: 20px !important;
+}
