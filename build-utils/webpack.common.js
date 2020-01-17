@@ -15,7 +15,21 @@ const config = {
         test: /\.(js)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
-      }
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        loader: 'file-loader',
+        options: {
+          outputPath: 'images',
+        },
+      },
+      {
+        test: /\.(ttf|eot|woff2|woff)$/i,
+        loader: 'file-loader',
+        options: {
+          outputPath: 'fonts',
+        },
+      },
     ]
   },
   optimization: {

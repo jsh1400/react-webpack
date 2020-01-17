@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Layout from '../../../Layout/default/page/Layout';
+import Layout from '../../../layout/default/page/Layout';
 
 const NoMatch = () => {
   return (

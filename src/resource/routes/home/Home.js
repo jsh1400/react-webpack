@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Layout from '../../../Layout/default/page/Layout';
+import Layout from '../../../layout/default/page/Layout';
 
 const Home = () => {
   return (

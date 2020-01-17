@@ -2,17 +2,17 @@ import React from 'react';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import importedComponent from 'react-imported-component';
 
-import Home from './routes/Home/Home';
+import Home from './routes/home/Home';
 import Loading from './components/common/Loading';
 
 const AsyncDynamicPAge = importedComponent(
-  () => import(/* webpackChunkName:'DynamicPage' */ './routes/DynamicPage/DynamicPage'),
+  () => import(/* webpackChunkName:'DynamicPage' */ './routes/dynamicPage/DynamicPage'),
   {
     LoadingComponent: Loading
   }
 );
 const AsyncNoMatch = importedComponent(
-  () => import(/* webpackChunkName:'NoMatch' */ './routes/NotFound/NoMatch'),
+  () => import(/* webpackChunkName:'NoMatch' */ './routes/notFound/NoMatch'),
   {
     LoadingComponent: Loading
   }
