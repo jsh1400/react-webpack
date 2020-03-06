@@ -1,6 +1,6 @@
-const commonPaths = require('./common-paths');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const commonPaths = require('./common-paths')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const config = {
   entry: {
     // vendor: ['semantic-ui-react']
@@ -55,6 +55,10 @@ const config = {
       template: 'public/index.html',
       favicon: 'public/favicon.ico'
     })
+
+
+
+
   ]
-};
-module.exports = config;
+}
+module.exports = config

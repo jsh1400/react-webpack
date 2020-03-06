@@ -1,6 +1,8 @@
 const commonPaths = require('./common-paths');
 const webpack = require('webpack');
+const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const config = {
   mode: 'production',
   entry: {
@@ -13,27 +15,30 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.css$/i,
           use: [
             {
-              // We configure 'MiniCssExtractPlugin'              
+              // We configure 'MiniCssExtractPlugin'
               loader: MiniCssExtractPlugin.loader,
-            }, 
+            },
             {
               loader: 'css-loader',
-              options: {
-                modules: true,
-                importLoaders: 1,
-                localsConvention: 'camelCase',
-                sourceMap: true
-              }
+              // options: {
+              //   modules: true,
+              //   importLoaders: 1,
+              //   localsConvention: 'camelCase',
+              //   sourceMap: false
+              // }
             },
             {
               loader: 'postcss-loader'
-            }
+            },
           ]
       }
     ]
+  },
+  optimization: {
+    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },
   plugins: [
     new MiniCssExtractPlugin({
